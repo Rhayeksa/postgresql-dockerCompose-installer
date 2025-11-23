@@ -10,5 +10,5 @@ services:
     ports:
       - "${POSTGRES_PORT:-5432}:5432"
     volumes:
-      - ${POSTGRES_DATA_PATH:-./}.postgres:/var/lib/postgresql/data
+      - ${POSTGRES_DATA_PATH:-.}/.postgres:/var/lib/postgresql/data
     restart: ${POSTGRES_RESTART:-always}

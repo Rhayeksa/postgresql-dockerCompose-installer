@@ -34,7 +34,7 @@ POSTGRESQL_PASSWORD=mypassword
 POSTGRES_PORT=5432
 
 # Lokasi data (gunakan absolute path di production)
-POSTGRES_DATA_PATH=./
+POSTGRES_DATA_PATH=
 
 # Restart policy (pilihan: no, always, on-failure, unless-stopped)
 POSTGRES_RESTART=unless-stopped
