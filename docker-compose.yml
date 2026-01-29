@@ -7,6 +7,7 @@ services:
     environment:
       POSTGRES_USER: ${POSTGRESQL_USERNAME:-postgres}
       POSTGRES_PASSWORD: ${POSTGRESQL_PASSWORD:-postgres}
+      TZ: "${POSTGRESQL_TZ:-Asia/Jakarta}"
     ports:
       - "${POSTGRES_PORT:-5432}:5432"
     volumes:
