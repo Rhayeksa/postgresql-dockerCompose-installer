@@ -1,0 +1,11 @@
+# =========================================
+# PostgreSQL Config
+# =========================================
+
+POSTGRESQL_IMAGE_VERSION=17.6-alpine
+POSTGRESQL_CONTAINER_NAME=postgres_server
+POSTGRESQL_USERNAME=postgres
+# POSTGRESQL_PASSWORD=postgres
+POSTGRES_PORT=5432
+# POSTGRES_DATA_PATH=~
+POSTGRES_RESTART=no # Restart policy (pilihan: no, always, on-failure, unless-stopped)
