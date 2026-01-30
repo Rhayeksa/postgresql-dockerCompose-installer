@@ -4,6 +4,7 @@ services:
   postgres:
     image: postgres:${POSTGRESQL_IMAGE_VERSION:-latest}
     container_name: ${POSTGRESQL_CONTAINER_NAME:-postgres_server}
+    restart: ${POSTGRES_RESTART:-always}
     environment:
       POSTGRES_USER: ${POSTGRESQL_USERNAME:-postgres}
       POSTGRES_PASSWORD: ${POSTGRESQL_PASSWORD:-postgres}
@@ -12,4 +13,3 @@ services:
       - "${POSTGRES_PORT:-5432}:5432"
     volumes:
       - ${POSTGRES_DATA_PATH:-.}/.postgres:/var/lib/postgresql/data
-    restart: ${POSTGRES_RESTART:-always}
